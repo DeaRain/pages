@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lottie Animation Example</title>
+<!-- Lottie Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js"></script>
+<style>
+    /* Style to make the animation container responsive */
+    #animation-container {
+        width: 100%;
+        max-width: 500px; /* Adjust the max-width as per your requirement */
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body>
+
+<div id="animation-container"></div>
+
+<script>
+// Define the path to your Lottie JSON file
+const animationPath = 'data.json'; // Replace 'your_animation.json' with the path to your Lottie JSON file
+
+// Load the animation
+lottie.loadAnimation({
+    container: document.getElementById('animation-container'), // Specify the container element
+    renderer: 'svg', // SVG renderer is recommended for web
+    loop: true, // Set loop to true if you want the animation to loop
+    autoplay: true, // Set autoplay to true if you want the animation to start playing immediately
+    path: animationPath // Provide the path to the JSON file
+});
+</script>
+
+</body>
+</html>
